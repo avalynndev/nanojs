@@ -1,6 +1,12 @@
 import type { ReactNode, FC } from "react";
 import type { Request, Response } from "express";
+import type { InlineConfig } from "vite";
 
+export interface UserNanoConfig {
+  root?: string;
+  port?: number;
+  vite?: InlineConfig;
+}
 export type PageComponent<P = {}> = (props: P) => ReactNode;
 
 export type LayoutComponent = FC<{ children?: ReactNode }>;
